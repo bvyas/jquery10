@@ -1,0 +1,49 @@
+<html>
+<head>
+	<title>jquery10</title>
+	<script type="text/javascript"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('form').submit(function(){
+				$('#t').append("<tr>" +
+					"<td>" + $("#first_name").val() + "</td>" +
+					"<td>" + $("#last_name").val() + "</td>" +
+					"<td>" + $("#email").val() + "</td>" +
+					"<td>" + $("#contact").val() + "</td>" +
+					"</tr>")
+					$(".text_input").val("");
+					return false;
+			});			
+		});
+	</script>
+	<style type="text/css"></style>
+	<style>
+	#t {
+		border: 1px solid;
+		width: 350px;
+	}
+	</style>
+</head>
+<body>
+	<table id= "t">
+		<thead>
+			<tr>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Email Address</th>
+					<th>Contact</th>				
+			</tr>
+		</thead>
+	</table>
+	<h4>Add User</h4>
+		<form>
+			First Name:<input class="text_input"type = "text" id="first_name" value="First Name"><p>
+			LAst Name:<input class="text_input" type = "text" id="last_name" value="Last Name"><p>
+			Email Address:<input class="text_input" type = "text" id="email" value="Email Address"><p>
+			Contact:<input class="text_input" type = "text" id="contact" value="Contact"><p>
+			<input type="submit" value="Add User" />
+
+		</form>	
+</body>
+</html>
